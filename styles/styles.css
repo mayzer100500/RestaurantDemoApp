@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+header {
+    background: url('../images/header.png');
+    background-size: cover;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 46px;
+}
+
+h1, h2 {
+    color: #FFF;
+    font-family: Smythe;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px; 
+}
+
+.container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 60px 45px;
+    border: 1px solid black;
+}
+
+.payment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 111px 26px rgba(0,0,0,0.49);
+    border-radius: 3.89px;
+    padding-top: 47px;
+    padding-bottom: 30px;
+}
+
+.payment > h3{
+    color: #000;
+    font-family: Verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31.119px;
+    margin-bottom: 46px;
+}
+
+.payment > input {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    border-radius: 3.89px;
+    border: 1.297px solid #757575;
+    color: #757575;
+    font-family: Verdana;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.119px;
+    padding: 16px 26px;
+}
+
+.payment > button {
+    width: 90%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D2D2D2;
+    padding: 25px;
+}
+
+.main-item > img {
+    width: 80px;
+    height: 89px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding-left: 1rem;
+    gap: 8px;
+}
+.description > h3 {
+    font-family: Smythe;
+    font-size: 28px;
+}
+.description > span:nth-child(2) {
+    color: #8B8B8B;
+    font-family: Smythe;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.description > span:nth-child(3) {
+    font-family: Smythe;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.add {
+    border: 1px solid #DEDEDE;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add:hover {
+    border: 2px solid #16DB99;
+    color: #16DB99; 
+}
+
+.order-container {
+    display: none;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.order > h3 {
+    font-family: Smythe;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.order-list {
+    width: 100%;
+    margin-top: 64px;
+}
+
+.order-list-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.order-list-items > span {
+    color: #000;
+    font-family: Smythe;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.order-list-items-item > span:nth-child(1) {
+    color: #000;
+    font-family: Smythe;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.order-list-items-item > span:nth-child(2) {
+    color: #BBB;
+    font-family: Verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.order-list-items-item > span:nth-child(2):hover {
+    font-weight: bold;
+    color: red;
+}
+
+.total-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #393333;
+    margin-top: 31px;
+    padding-top: 14px;
+    padding-bottom: 53px;
+}
+
+.total-price > span {
+    color: #0E0E0E;
+    font-family: Smythe;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #16DB99;
+    /* padding: 18px 175px 18px 194px; */
+    padding: 18px;
+    color: #fff;
+    font-family: Verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.order-placed {
+    display: none;
+    width: 80%;
+    padding: 55px;
+    border-radius: 3px;
+    background: #ECFDF5;
+    margin: 0 auto;
+    color: #065F46;
+    font-family: Smythe;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 45px;
+}
